@@ -49,21 +49,16 @@ jQuery.fn.validator = function () {
     });
   }
 
-  // Event handling
-
-  $inputs.on('focus', function (event) {
-    console.log(event.currentTarget);
-  });
-
-  $inputs.on('blur', function (event) {
-    var $input = $(event.currentTarget);
+  function determineFieldType ($input) {
     var value = $input.val();
     var length = value.length;
     var message, $message, $container;
     // Email validation
     if ($input.attr('type') === 'email') {
-      var index = value.indexOf('@');
-      if (index > -1 && value[index + 1]) {
+      // Check to see if the email field is valid.
+      debugger;
+      var isValid = validateEmail($input);
+      if (isValid) {
         $input.removeClass('invalid');
         // Remove the error message.
         $input.next('.message').remove();
@@ -74,6 +69,10 @@ jQuery.fn.validator = function () {
         message = "The value is not a valid email address."
         setMessage($input, message);
       }
+    }
+    // URL validation
+    if ($input.attr('type') == 'url') {
+
     }
     // Validate that the field has at least 10 characters.
     else {
@@ -89,6 +88,46 @@ jQuery.fn.validator = function () {
         $input.next('.message').remove();
       }
     }
+  }
+
+  function validateEmail ($input) {
+    var isValid = true;
+    var value = $input.val();
+    var index = value.indexOf('@');
+
+    // Check to see if the field value contains
+    // and @ symbol and has at least one character
+    // after the @ symbol.
+    if (!(index > -1 && value[index + 1])) {
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  /**
+   *
+   */
+  function validateURL () {
+
+  }
+
+  /**
+   *
+   */
+  function validatePassword () {
+
+  }
+
+  // Event handling
+
+  $inputs.on('focus', function (event) {
+    console.log(event.currentTarget);
+  });
+
+  $inputs.on('blur', function (event) {
+    var $input = $(event.currentTarget);
+    determineFieldType($input);
   });
 
   return this;
