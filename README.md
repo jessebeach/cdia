@@ -7,9 +7,8 @@
 + Review of doctype, html element, head element, body element, link element and inclusion of stylesheets with the <link> tag
 + Review of HTML form elements
 + type, name and value attributes
-+ Start building the portfolio viewer, CSS version
-+ https://github.com/jessebeach/cdia/tree/gh-pages/portfolio-viewer
 + Build an HTML form with 2 columns
++ Start building the [portfolio viewer](https://github.com/jessebeach/cdia/tree/gh-pages/WD110/portfolio-viewer), CSS version
 
 ## Day 2
 
