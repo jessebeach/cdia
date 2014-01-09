@@ -1,3 +1,5 @@
+Pick a website that you enjoy. Navigate to a page on that site. Now, open the developer tools in Google Chrome and use the tools to answer the following questions.
+
 1. What is the URL of the page that you are investigating?
 1. How many links are on the page?
 1. How many article element are on the page?
