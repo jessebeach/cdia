@@ -11,3 +11,9 @@ Pick a website that you enjoy. Navigate to a page on that site. Now, open the de
 1. Do any elements have inline styles?
 1. Are there any scripts in the body tag? If so how many?
 1. How many h1 tags are on the page?
+
+Transition some properties!
+
+1. Use Lea Verou's animatable as inspiration: http://leaverou.github.io/animatable/
+1. Choose 10 CSS properties to transition e.g. background-color, font-size, zoom, or border
+1. Create a simple page of boxes in a grid, like the animatable, and transition one property per box.
