@@ -1,0 +1,24 @@
+# JavaScript functions
+
+## Write a function the performs the requested task and returns the desired information.
+
+(!) Write a function that concatenates the words 'hello' and 'world' and returns the combined string.
+
+For example:
+
+function helloWorld () {
+  // Let's put in a space so that the words don't run together. Think ahead!
+  return 'hello' + ' ' + 'world';
+}
+
+(!) Write function that adds the number 5 and 7 together and returns the result.
+
+(!) Write a function that accepts two arguments, adds them together and returns the result.
+
+(!) Write a function that accepts two arguments, subtracts the second argument from the first and returns the result.
+
+(!) Write a function that accepts two arguments, multiplies them and returns the result.
+
+(!) Write a function that accepts two arguments, divides the first by the second and returns the result.
+
+(!) Write a function that accepts on argument, inserts it into the string "Hello @argument, how are you?" and returns the result.

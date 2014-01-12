@@ -4,83 +4,29 @@
     <title>JavaScript 1 exercises</title>
     <meta chartset="utf-8" />
     <!-- (!) Add jQuery to the page; Verify that jQuery loads when you view the page in a browser. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <style>
 
       /* (!) The .tile divs should always have a height of 80px. */
-
-      .tile {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        height: 80px;
-      }
 
       /* (!) The .tile divs should appear in 1 column for screen sizes up to 320px wide */
 
       /* (!) The .tile divs should appear in 2 columns for screen sizes up to 600px wide */
 
-      @media screen and (min-width:320px) {
-        .tile {
-          float:left;
-          width: 50%;
-        }
-      }
-
       /* (!) The .tile divs should appear in 3 columns for screen sizes up to 960px wide */
-
-      @media screen and (min-width:600px) {
-        .tile {
-          width: 33%;
-        }
-      }
 
       /* (!) The .tile divs should appear in 5 columns for screen sizes over 960px wide */
 
-      @media screen and (min-width:960px) {
-        .tile {
-          width: 20%;
-        }
-      }
-
       /* (!) The section tag should never get larger than 960px wide. It should center on the screen when the screen is wider than 960px. */
-
-      @media screen and (min-width:960px) {
-        section {
-          margin: 0 auto;
-          width: 960px;
-        }
-      }
 
       /* (!) Add padding of 5px to all the elements with a lang attribute with the value en (be careful not to break your columns!) */
 
-      [lang="en"] {
-        padding: 5px;
-      }
-
       /* (!) Add a border of 5px to all the elements with a lang attribute with the value fr (be careful not to break your columns!) */
-
-      [lang="fr"] {
-        border: 5px solid red;
-      }
 
       /* (!) All .bright divs should have a 5px outline in yellow. */
 
-      .bright {
-        outline 5px solid yellow;
-      }
-
       /* (!) The element that follows a .bright div should have a 5px outline in black. */
 
-      .bright + .tile {
-        outline: 5px solid black;
-      }
-
       /* (!) The element with the id 'example-23' should have text with font size 2em. */
-
-      #example-23 {
-        font-size: 2em;
-      }
 
     </style>
   </head>
@@ -160,106 +106,39 @@
 
       /* (!) In a comment, list several examples of words that are reserved in JavaScript i.e. they can't be used as variable names. */
 
-      /* var, function, while, for, if, break, do, delete */
-
       /* (!) How many .tile elements are there on the page? Count them with jQuery */
-
-      var tileCount = $('.tile').length;
-      console.log(tileCount);
 
       /* (!) Replace in the text in #example-1 with the number of .tile elements on the page. */
 
-      $('#example-1').text(tileCount);
-
       /* (!) Find the elements on the page with a .blue class and change their background color to blue. */
-
-      $('.blue').css('background-color', 'blue');
 
       /* (!) Find the elements on the page with a .white class and change their color to white. */
 
-      $('.white').css('color', 'white');
-
       /* (!) Find the sibling element that precedes the element with the class .middle and give it an outline of 1px red. */
-
-      $('.middle').prev().css('outline', '1px dotted red');
 
       /* (!) Find the sibling element that follows the element with the class .middle and give it an outline of 1px green. */
 
-      $('.middle').next().css('outline', '1px dotted green');
-
       /* (!) How many parent tags are there between the .bottom.insane span element and the element with id #element-35? */
-
-      console.log($('.bottom.insane').parentsUntil('#element-35').length);
 
       /* (!) Find the .waldo span inside the section */
 
-      $('section').find('.waldo')
-
       /* (!) When a .tile element is clicked, its background color should change to orange. */
-
-      $('.tile').on('click', function (event) {
-        $(event.currentTarget).css('background-color', 'orange');
-      });
 
       /* (!) When the mouse moves over a .hoverable element, it's background color should change to white.  */
 
-      $('.tile').on('mouseenter', function (event) {
-        $(event.currentTarget).css('background-color', 'white');
-      });
-
       /* (!) Write a comment listing and detailing the 5 parts of a function. */
-
-      /**
-       * the function keyword
-       * the name of the function (option)
-       * the parameters of the function in parentheses
-       * the body of the function in curly braces
-       * the return statement of the function (optional)
-       */
 
       /* (!) Write a function that takes two arguments. The function should return the combination (+) of those two arguments. */
 
-      function adder (a, b) {
-        return a + b;
-      }
-
       /* (!) Use the function you wrote above to take the text from #example-32 and combine it with this phrase 'flowers for Algernon'. The text in #example-32 should then be replaced with this new phrase. */
-
-      var text = $('#example-32').text();
-      $('#example-32').text(text + ' ' + 'flowers for Algernon');
 
       /* (!) When the last .tile div in the section is clicked, it should become the first .tile div in the section. */
 
-      $('section').find('.tile:last').on('click', function (event) {
-        $('section').prepend(event.currentTarget);
-      });
-
       /* (!) When the first .tile div in the section is clicked, it should become the last .tile div in the section. */
-
-      $('section').find('.tile:first').on('click', function (event) {
-        $('section').append(event.currentTarget);
-      });
 
       /* (!) Write comments into the random color generator above explaining how it works. Use the command line to explore pieces of it. */
 
       /* (!) Write Write a random color generator that creates rgba() colors instead of hex colors. */
-
-      (function () {
-        function randomeRGBAColor() {
-          function color () {
-            return Math.round(Math.random() * 255);
-          }
-          function alpha () {
-            return Math.round(Math.random() * 10) / 10;
-          }
-          return [color(), color(), color(), alpha()].join(', ');
-        }
-        Array.prototype.slice.call(document.querySelectorAll('.tile'))
-         .forEach(function (el) {
-            el.style['background-color'] = 'rgba(' + randomeRGBAColor() + ')';
-            el.style['color'] = 'rgba(' + randomeRGBAColor() + ')';
-          });
-      }());
 
     </script>
   </body>
