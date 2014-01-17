@@ -11,6 +11,8 @@ function helloWorld () {
   return 'hello' + ' ' + 'world';
 }
 
+console.log( helloWorld() ); 
+
 (!) Write function that adds the number 5 and 7 together and returns the result.
 
 (!) Write a function that accepts two arguments, adds them together and returns the result.
