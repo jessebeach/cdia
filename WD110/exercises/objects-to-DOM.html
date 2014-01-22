@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Turn data into DOM</title>
+  <script>
+
+    var data = [
+      {
+        title: 'The Giver',
+        type: 'book',
+        author: 'Lois Lowry',
+        createDate: 725864400000,
+        publishDate: 1138078800000,
+        tags: ['literature', 'classic', 'young adult'],
+        content: 'Jonas\' world is perfect. Everything is under control. There is no war or fear or pain. There are no choices. Every person is assigned a role in the Community. When Jonas turns twelve, he is singled out to receive special training from The Giver. The Giver alone holds the memories of the true pain and pleasure of life. Now, it is time for Jonas to receive the truth. There is no turning back.',
+        featureImg: 'http://d202m5krfqbpi5.cloudfront.net/books/1342493368l/3636.jpg'
+      },
+      {
+        title: 'To Kill a Mockingbird',
+        type: 'book',
+        author: 'Harper Lee',
+        createDate: -315619200000,
+        publishDate: 1146628800000,
+        tags: ['classic', 'period piece', 'young adult', 'coming of age'],
+        content: 'Tomboy Scout Finch comes of age in a small Alabama town during a crisis in 1935. She admires her father Atticus, how he deals with issues of racism, injustice, intolerance and bigotry, his courage and his love.',
+        featureImg: 'http://d202m5krfqbpi5.cloudfront.net/books/1361975680l/2657.jpg'
+      },
+      {
+        title: 'The Perks of Being a Wallflower',
+        type: 'short novel',
+        author: 'Stephen Chbosky',
+        createDate: 915148800000,
+        publishDate: 917845200000,
+        tags: ['young adult', 'coming of age', 'queer fiction'],
+        content: 'Charlie is a freshman.<br/ >And while he\'s not the biggest geek in the school, he is by no means popular. Shy, introspective, intelligent beyond his years yet socially awkward, he is a wallflower, caught between trying to live his life and trying to run from it.<br />Charlie is attempting to navigate his way through uncharted territory: the world of first dates and mix tapes, family dramas and new friends; the world of sex, drugs, and The Rocky Horror Picture Show, when all one requires is that perfect song on that perfect drive to feel infinite. But he can\'t stay on the sideline forever. Standing on the fringes of life offers a unique perspective. But there comes a time to see what it looks like from the dance floor.<br />The Perks of Being a Wallflower is a deeply affecting coming-of-age story that will spirit you back to those wild and poignant roller-coaster days known as growing up.',
+        featureImg: 'http://d202m5krfqbpi5.cloudfront.net/books/1363910637l/22628.jpg'
+      },
+      {
+        title: 'The Yellow Wallpaper',
+        type: 'short story',
+        author: 'Charlotte Perkins Gilman',
+        createDate: -2461431600000,
+        publishDate: null,
+        tags: ['19th century', 'feminist literature', 'psychosis'],
+        content: 'Presented in the first person, the story is a collection of journal entries written by a woman whose physician husband has confined her to the upstairs bedroom of a house he has rented for the summer. She is forbidden from working and has to hide her journal from him, so she can recuperate from what he calls a "temporary nervous depression – a slight hysterical tendency," a diagnosis common to women in that period.[2] The windows of the room are barred, and there is a gate across the top of the stairs, allowing her husband to control her access to the rest of the house.',
+        featureImg: 'http://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Yellowwp_med.jpg/200px-Yellowwp_med.jpg'
+      },
+      {
+        title: 'THE TELL-TALE HEART',
+        type: 'short story',
+        author: 'Edgar Allan Poe',
+        createDate: -4007750400000,
+        publishDate: null,
+        tags: ['gothic horror', 'short story', 'macabre'],
+        content: ' It is told by an unnamed narrator who endeavors to convince the reader of his sanity, while describing a murder he committed. (The victim was an old man with a filmy "vulture eye", as the narrator calls it.) The murder is carefully calculated, and the murderer hides the body by dismembering it and hiding it under the floorboards. Ultimately the narrator\'s guilt manifests itself in the form of the sound — possibly hallucinatory — of the old man\'s heart still beating under the floorboards.',
+        featureImg: 'http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/The_Pioneer_Poe_1843_cover_2.jpg/200px-The_Pioneer_Poe_1843_cover_2.jpg'
+      }
+    ];
+
+    // Write JavaScript to turn the data into DOM elements and attach them to
+    // the page.
+
+  </script>
+</head>
+<body>
+
+  (!) Parse the data array defined above. Turn the properties of each object in
+      the array into DOM elements. List the items like a news site.
+
+  (!) title -> h2 tag
+  (!) type -> turn this into a class using the className property on the item wrapper.
+  (!) author -> span or p tag in a footer tag
+  (!) createDate -> span or p tag in a footer tag
+  (!) publishDate -> use the publishDate if it exists, otherwise use the createDate. span or p tag in a footer tag.
+  (!) tags -> a ul list of tags
+  (!) content -> put this is a div tag
+  (!) featureImg -> if it exists, img tag
+
+  (!) List the items here in HTML.
+  <div id="items"></div>
+
+</body>
+</html>
