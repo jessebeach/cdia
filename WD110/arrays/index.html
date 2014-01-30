@@ -20,6 +20,13 @@
         'special k',
         'no preference'
       ];
+
+      /*
+      (!) Create a select element with cereal options from the list above.
+
+      (!) Raise an alert that tells the user what choice was made.
+      */
+
       var images = [
         'http://placekitten.com/300/410',
         'http://placekitten.com/289/450',
@@ -28,17 +35,18 @@
         'http://placekitten.com/100/450',
         'http://placekitten.com/220/400'
       ];
-      for (var i = 0; i < images.length; i++) {
-        /*var width = Math.floor(Math.random() * 100) + 200;
-        var height = Math.floor(Math.random() * 100) + 300;*/
-        /*$('<img>', {
-          'src': 'http://placekitten.com/' + width + "/" + height
-        })
-        .appendTo('body');*/
-        $('<img>', {'src': images[i]})
-        .appendTo('body');
-      }
 
+      /*
+      (!) Create an image tag for each URL in the array and append it to the page.
+
+      (!) Prompt the user for a numer of images and then print that many to the page.
+          Tell them if they ask for more images than you have.
+
+      (!) Let the user request any number of images (within a limit). Just grab
+          images of random sizes from http://placekitten.com
+
+
+      */
     </script>
   </body>
 </html>
