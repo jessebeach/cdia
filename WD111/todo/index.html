@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>Todo app</title>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+
+  <div class="todo">
+    <form class="todo-new-item-form">
+      <input name="new" />
+      <input type="submit" value="Add" />
+    </form>
+    <ul class="todo-items"></ul>
+  </div>
+
+  <script>
+
+  var $todo = $('.todo');
+
+  // Add a form submit handler.
+  $todo.find('.todo-new-item-form')
+    .on('submit', function (event) {
+      event.preventDefault();
+      var $form = $(this);
+      var $input = $form.find('[name="new"]');
+      var text = $input.val().trim();
+
+      if (text) {
+        // Create an li element
+        var $li = $('<li><p></p><button>Remove</button></li>');
+
+        // Put the text into the li element
+        $li.find('p').text(text);
+
+        // Append the li element to our list
+        $todo.find('.todo-items').append($li);
+
+        // Clear out the user input.
+        $input.val('');
+      }
+
+    });
+
+  // Add a click handler to the remove buttons
+  $todo.find('.todo-items')
+    .on('click', 'button', function (event) {
+      var $button = $(this);
+      var $li = $button.parent();
+      $li.remove();
+    });
+
+  </script>
+</body>
+</html>
