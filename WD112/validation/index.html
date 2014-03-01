@@ -1,0 +1,62 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Form Validation</title>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <style>
+    .invalid {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registration-form" action="#">
+    <input name="firstName" class="validate-alphachars" placeholder="First name" required="required" />
+    <input name="lastName" class="validate-alphachars" placeholder="Last name" required="required" />
+    <input type="submit" value="submit" />
+  </form>
+
+  <script>
+    $(document).ready(function () {
+
+      function validateAlhpaChars (value) {
+        var isValid = true;
+        for (var i = 0, il = value.length; i < il; i++) {
+          console.log(value.charCodeAt(i));
+          var code = value.charCodeAt(i);
+          // If a character falls outside the a-zA-Z range,
+          // then assign false to isValid.
+          if (
+            (code < 64) ||
+            (code > 90 && code < 97) ||
+            (code > 123)
+            ) {
+            isValid = false;
+          }
+        }
+        return isValid;
+      }
+
+      var $alphas = $('.validate-alphachars');
+      // Validate the name input; Only alpha chars allowed.
+      $alphas.on('blur', function (event) {
+        var value = $(this).val();
+        // Check that the value only contains letters.
+
+        var isValid = validateAlhpaChars(value);
+
+        if (!isValid) {
+          $(this).addClass('invalid');
+          $('<div class="message">Only alphabetic characters allowed.</div>')
+            .insertAfter(this);
+        }
+        else {
+          $(this).removeClass('invalid');
+          $(this).next('.message').remove();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
